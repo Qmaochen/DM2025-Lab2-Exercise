@@ -1,0 +1,340 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">movie_review</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+
+
+Film 
+Review 
+
+
+
+
+
+
+
+Genre  
+
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">The film review is a popular way for critics to assess a film’s overall quality and determine 
+whether or not they think the film is worth recommending.  Film reviews differ from scholarly 
+film articles in that they encompass personal and idiosyncratic reactions to and evaluations of a 
+film, as well as objective analyses of the film’s formal techniques and thematic content.</span>   
+
+Preparing to Write the Review 
+
+<span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">While film reviews tend to be fairly short (approximately 600 to 1200 words), they require a lot 
+of preparation before you begin writing.  Prior to viewing the film, you may want to get a sense 
+of the bodies of work by the director, writer, or individual actor.  For instance, you may watch 
+other films by the same director or writer in order to get a sense of each individual style.  This 
+will enable you to contextualize the film and determine whether it works as a continuation and/or 
+disruption within the broad trends of the director’s or writer’s work.</span>   
+
+<span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">Writing a film review often requires multiple viewings of the film. Plan to watch the film two or 
+even three times.  During the first viewing, surrender yourself to the cinematic experience; in 
+other words, get lost in the narrative and enjoy the film without worrying about the argument you 
+will eventually cultivate.  During your second viewing, try distancing yourself from the plot and 
+instead focus on interesting elements of the film that you can highlight in the review.  You may 
+separate these elements into two broad categories: 1) formal techniques such as cinematography, 
+editing, mise-en-scene, lighting, diegetic and non-diegetic sound, genre, or narratology, and 2) 
+thematic content that resonates with issues such as history, race, gender, sexuality, class, or the 
+environment.   
+
+After watching the film a second time, take careful notes on the formal and thematic elements of 
+the film.</span>  Then attempt to create a central idea for your review that brings together the film’s 
+formal and thematic elements.  If your second viewing does not yield a strong central claim for 
+the review or if you need to take more notes, you may have to watch the film or parts of the film 
+a third time.   
+
+
+
+Duke Writing Studio  
+
+2 
+
+
+Writing the Film Review 
+
+Although there is not a set formula to follow when writing a film review, the genre does have 
+certain common elements that most film reviews include.  
+
+1) Introduction 
+- 
+In the opening of your review, provide some basic information about the film.  You 
+may include film’s name, year, director, screenwriter, and major actors.   
+- 
+Your introduction, which may be longer than one paragraph, should also begin to 
+evaluate the film, and it should allude to the central concept of the review.  A film 
+review does not have to contain a thesis or main claim, but it should focus on a 
+central analysis and assessment.     
+2) Plot Summary  
+- 
+Remember that many readers of film reviews have not yet seen the film.  While you 
+want to provide some plot summary, keep this brief and avoid specific details that 
+would spoil the viewing for others.   
+3) Description  
+- 
+While the plot summary will give the reader a general sense of what the film is about, 
+also include a more detailed description of your particular cinematic experience 
+watching the film.  This may include your personal impression of what the film looks, 
+feels, and sounds like.  In other words, what stands out in your mind when you think 
+about this particular film?  
+4) Analysis 
+- 
+In order to explain your impression of the film, consider how well the film utilizes 
+formal techniques and thematic content.  How do the film’s formal techniques (such 
+as cinematography, editing, mise-en-scène, lighting, diegetic and non-diegetic sound, 
+genre, or narrative) affect the way the film looks, feels, and sounds to you?  How 
+does the thematic content (such as history, race, gender, sexuality, class, or the 
+environment) affect your experience and interpretation?  Also, do the formal 
+techniques work to forward the thematic content?   
+5) Conclusion/Evaluation 
+- 
+The closing of your film review should remind the reader of your general thoughts 
+and impressions of the film.  You may also implicitly or explicitly state whether or 
+not you recommend the film.  Make sure to remind the reader of why the film is or is 
+not worth seeing.   
+Examples of Film Reviews 
+
+One of the best ways to learn how to write a film review is simply by reading good film reviews.  
+You can find examples in most major newspapers and magazines.  Check out the arts and 
+entertainment sections of The New York Times, The Washington Post, The Guardian, The New 
+Yorker, The Atlantic, or Rolling Stone. 
+
+
+
+Duke Writing Studio  
+
+3 
+
+
+Recommended Texts 
+
+Corrigan, Timothy.  A Short Guide to Writing about Film.  New York: Longman, 2001. 
+
+Part of Longman’s Short Guide series, Corrigan discusses different approaches to film 
+and provides useful tips on ways to begin writing about film.  The book includes a 
+glossary of technical film terms, and a section of the book deals with these terms in more 
+detail.  It also features sample essays and a section on conducting film research.  
+
+Bordwell, David and Kristen Thompson.  Film Art: An Introduction.  New York: McGraw 
+
+Hill, 2006.  
+
+First published in 1979 and updated every few years, Bordwell and Thompson’s book has 
+become the standard textbook for film courses.  Although the authors pay attention to 
+genre, history, production, and distribution, the book is most useful for its attention to 
+style and how formal aspects of films create meaning.  It is a bit much to get through for 
+a single paper on film, but is a useful resource, featuring a glossary of discipline-specific 
+terms and clearly delineated chapters on different aspects of film analysis.  
+
+Useful Links 
+
+Internet Movie Database (IMDb):  
+www.imdb.com  
+
+For quick information about a film, director, actor, producer, or production company, 
+IMDb can’t be beat.  It is not an ideal place to end your research, but it is a fine place to 
+start.  
+
+Duke Writing Studio’s “Visual Rhetoric/Visual Literary: Writing about Film”: 
+http://twp.duke.edu/uploads/media_items/film.original.pdf   
+
+This handout provides an excellent overview of how to approach film as a visual 
+medium.  It also discusses several key film terms and formal features that one should pay 
+attention to when moving from a passive to an active viewing experience.  
+
+Dartmouth Writing Program Handout on Film: 
+http://www.dartmouth.edu/~writing/materials/student/humanities/film.shtml  
+
+This handout is more focused on writing about film than on visual literacy, and it 
+discusses different approaches to film (film history, ideological analysis, cultural 
+studies/national cinemas, and auteur theory) not addressed in the Duke Writing Studio 
+handout.  It also features a short glossary of film terms.  
+
+
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="2" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/3</span> |
+          Pos <span id="posInfo">[42-420]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "movie_review", "text": "The film review is a popular way for critics to assess a film\u2019s overall quality and determine whether or not they think the film is worth recommending. Film reviews differ from scholarly film articles in that they encompass personal and idiosyncratic reactions to and evaluations of a film, as well as objective analyses of the film\u2019s formal techniques and thematic content.", "color": "#D2E3FC", "startPos": 42, "endPos": 420, "beforeText": " \n \nFilm \nReview \n \n \n \n \n \n \n \nGenre  \n \n", "extractionText": "The film review is a popular way for critics to assess a film\u2019s overall quality and determine \nwhether or not they think the film is worth recommending.  Film reviews differ from scholarly \nfilm articles in that they encompass personal and idiosyncratic reactions to and evaluations of a \nfilm, as well as objective analyses of the film\u2019s formal techniques and thematic content.", "afterText": "   \n \nPreparing to Write the Review \n \nWhile film reviews tend to be fairly short (approximately 600 to 1200 words), they require a lot \nof preparatio", "attributesHtml": "<div><strong>class:</strong> movie_review</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">movie_title</span>: <span class=\"lx-attr-value\">Film Review</span>, <span class=\"lx-attr-key\">reviewer_name</span>: <span class=\"lx-attr-value\">critics</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">neutral</span>, <span class=\"lx-attr-key\">key_aspects</span>: <span class=\"lx-attr-value\">overall quality, formal techniques, thematic content</span>, <span class=\"lx-attr-key\">summary</span>: <span class=\"lx-attr-value\">Film reviews are a common method for critics to evaluate a film&#x27;s quality and decide if it&#x27;s recommendable, differing from scholarly articles by including personal reactions alongside objective analysis.</span>}</div>"}, {"index": 1, "class": "movie_review", "text": "While film reviews tend to be fairly short (approximately 600 to 1200 words), they require a lot of preparation before you begin writing. Prior to viewing the film, you may want to get a sense of the bodies of work by the director, writer, or individual actor. For instance, you may watch other films by the same director or writer in order to get a sense of each individual style. This will enable you to contextualize the film and determine whether it works as a continuation and/or disruption within the broad trends of the director\u2019s or writer\u2019s work.", "color": "#D2E3FC", "startPos": 459, "endPos": 1022, "beforeText": "and evaluations of a \nfilm, as well as objective analyses of the film\u2019s formal techniques and thematic content.   \n \nPreparing to Write the Review \n \n", "extractionText": "While film reviews tend to be fairly short (approximately 600 to 1200 words), they require a lot \nof preparation before you begin writing.  Prior to viewing the film, you may want to get a sense \nof the bodies of work by the director, writer, or individual actor.  For instance, you may watch \nother films by the same director or writer in order to get a sense of each individual style.  This \nwill enable you to contextualize the film and determine whether it works as a continuation and/or \ndisruption within the broad trends of the director\u2019s or writer\u2019s work.", "afterText": "   \n \nWriting a film review often requires multiple viewings of the film. Plan to watch the film two or \neven three times.  During the first viewing, ", "attributesHtml": "<div><strong>class:</strong> movie_review</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">movie_title</span>: <span class=\"lx-attr-value\">Film Review</span>, <span class=\"lx-attr-key\">reviewer_name</span>: <span class=\"lx-attr-value\">critics</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">neutral</span>, <span class=\"lx-attr-key\">key_aspects</span>: <span class=\"lx-attr-value\">preparation, director&#x27;s work, writer&#x27;s work, actor&#x27;s work, style, contextualization</span>, <span class=\"lx-attr-key\">summary</span>: <span class=\"lx-attr-value\">Writing a film review, though typically short, requires significant preparation, including researching the director&#x27;s, writer&#x27;s, or actor&#x27;s previous works to understand their style and contextualize the current film.</span>}</div>"}, {"index": 2, "class": "movie_review", "text": "Writing a film review often requires multiple viewings of the film. Plan to watch the film two or even three times. During the first viewing, surrender yourself to the cinematic experience; in other words, get lost in the narrative and enjoy the film without worrying about the argument you will eventually cultivate. During your second viewing, try distancing yourself from the plot and instead focus on interesting elements of the film that you can highlight in the review. You may separate these elements into two broad categories: 1) formal techniques such as cinematography, editing, mise-en-scene, lighting, diegetic and non-diegetic sound, genre, or narratology, and 2) thematic content that resonates with issues such as history, race, gender, sexuality, class, or the environment. After watching the film a second time, take careful notes on the formal and thematic elements of the film.", "color": "#D2E3FC", "startPos": 1028, "endPos": 1941, "beforeText": "tualize the film and determine whether it works as a continuation and/or \ndisruption within the broad trends of the director\u2019s or writer\u2019s work.   \n \n", "extractionText": "Writing a film review often requires multiple viewings of the film. Plan to watch the film two or \neven three times.  During the first viewing, surrender yourself to the cinematic experience; in \nother words, get lost in the narrative and enjoy the film without worrying about the argument you \nwill eventually cultivate.  During your second viewing, try distancing yourself from the plot and \ninstead focus on interesting elements of the film that you can highlight in the review.  You may \nseparate these elements into two broad categories: 1) formal techniques such as cinematography, \nediting, mise-en-scene, lighting, diegetic and non-diegetic sound, genre, or narratology, and 2) \nthematic content that resonates with issues such as history, race, gender, sexuality, class, or the \nenvironment.   \n \nAfter watching the film a second time, take careful notes on the formal and thematic elements of \nthe film.", "afterText": "  Then attempt to create a central idea for your review that brings together the film\u2019s \nformal and thematic elements.  If your second viewing does no", "attributesHtml": "<div><strong>class:</strong> movie_review</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">movie_title</span>: <span class=\"lx-attr-value\">Film Review</span>, <span class=\"lx-attr-key\">reviewer_name</span>: <span class=\"lx-attr-value\">critics</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">neutral</span>, <span class=\"lx-attr-key\">key_aspects</span>: <span class=\"lx-attr-value\">multiple viewings, cinematic experience, narrative, formal techniques, thematic content, cinematography, editing, mise-en-scene, lighting, sound, genre, narratology, history, race, gender, sexuality, class, environment, note-taking</span>, <span class=\"lx-attr-key\">summary</span>: <span class=\"lx-attr-value\">Effective film reviews necessitate multiple viewings: the first for immersion, the second for analyzing formal techniques (cinematography, editing, sound, etc.) and thematic content (social issues, etc.), followed by detailed note-taking.</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
